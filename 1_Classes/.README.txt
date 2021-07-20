@@ -1,0 +1,5 @@
+In this folder, it expands my knowledge of Object Oriented Program
+for python. This folder will contain many projects that are related
+to classes. Thank you for your time! :-)
+
+- Kyle Matthew Zhou; July 20, 2021
