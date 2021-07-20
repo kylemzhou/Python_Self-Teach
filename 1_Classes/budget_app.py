@@ -10,10 +10,15 @@ class Receipts:
         self.cost = cost
     
     def obj_category(self,obj_dict = {}):
-        obj_dict[self.category] = self.cost
+        self.obj_dict = obj_dict
+        obj_dict[self.category] = str("$"+ "%.2f" % self.cost)
+
+        return self.obj_dict
     
-    def get_obj_category(self):
-        return obj_dict
+    def add_obj_category(self):
+        new_dict = Receipts.obj_category(self)
+        new_dict[self.category] = str("$"+"%.2f" % self.cost)
+        return new_dict
 
     def __str__(self):
         return str("\nYou have spent $%s on %s." %(
@@ -35,7 +40,8 @@ def main():
             encap = Receipts(category,price)
             loop = False
         if question == 'no':
-            Receipts(category,price)
+            cont = Receipts(category,price).add_obj_category()
+            print(cont)
             continue
     
     print(encap.obj_category())
